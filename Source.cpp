@@ -1,5 +1,4 @@
 #include <SFML/Graphics.hpp> //заголовочный файл, отвечающий за работу с графикой
-#include <SFML/Audio.hpp> //заголовочный файл, отвечающий за музыку
 #include <string>
 #include <ctime>
 #include <fstream> // работа с файлами
@@ -59,11 +58,6 @@ int main()
 	sf::Texture appleT;
 	appleT.loadFromFile("sprites/red.png");
 	apple.setTexture(&appleT);
-
-	sf::Music music;
-	music.openFromFile("low_tetris.ogg");
-	music.play();
-	music.setLoop(true); // Ставим на бесконечное повторение музыки
 
 	sf::Clock clock;
 	float timer = 0;
