@@ -1,4 +1,4 @@
-#include <SFML/Graphics.hpp> //заголовочный файл, отвечающий за работу с графикой
+#include "Graphics.hpp"
 #include <string>
 #include <ctime>
 #include <fstream> // работа с файлами
