@@ -81,14 +81,14 @@ int main()
 																							// another part of the map
 	
 	std::string filePath = "highscore.bin"; // The path to the file with the records of the best game result
-	std::ifstream in(filePath, std::ios::binary || std::ios::app); // We set the "binary file" mode and rewrite to a file
+	std::ifstream in(filePath.c_str(), std::ios::binary | std::ios::app); // We set the "binary file" mode and rewrite to a file
 
 	if (in.peek() != 0) // If this check works, then we calculate the best score from the file
 	{
 		in >> highscore;
 	}
 	in.close(); // Close the file 
-	std::ofstream out(filePath, std::ios::binary || std::ios::app);
+	std::ofstream out(filePath.c_str(), std::ios::binary | std::ios::app);
 
 	while (window.isOpen())
 	{
